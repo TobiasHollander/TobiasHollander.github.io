@@ -1,14 +1,6 @@
 body{
   font-family: 'Lato', sans-serif;
 }
-h1{
-  font-family: 'Vidaloka', serif;
-}
-
-h2{
-  font-family: 'Lato', sans-serif;
-  weight: 700;
-}
 
 .container {
   max-width: 960px;
@@ -21,6 +13,23 @@ h2{
 .img{
   width: 650px;
   height: 400px;
+}
+
+.slogen {
+  margin-top: 50px;
+  font-family: 'Vidaloka', serif;
+}
+
+.card {
+  margin-top: 50px;
+}
+
+.card-title {
+  font-family: 'Vidaloka', serif;
+}
+
+.special-font {
+  font-family: 'Vidaloka', serif;
 }
 
 /*

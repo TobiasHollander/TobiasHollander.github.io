@@ -9,49 +9,63 @@
     <title>Tobias Hollander Portfolio</title>
 
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700|Vidaloka" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link href="../css/style.css" rel="stylesheet">
   </head>
 
 <body>
 
-  <nav class="site-header sticky-top py-1">
-    <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2 d-none d-md-inline-block" href="../index.html">Home</a>
-      <a class="py-2 d-none d-md-inline-block" href="about.html">About</a>
-      <a class="py-2 d-none d-md-inline-block" href="skills.html">Projects</a>
+  <nav class="teal darken-4">
+    <div class="nav-wrapper container">
+      <a href="../index.html" class="brand-logo special-font">Tobias Hollander</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Projects</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Projects</a></li>
+      </ul>
     </div>
   </nav>
 
-<div class="container mt-5 pt-5">
+<div class="container">
   <div class='row'>
-    <div class='col-sm-6'>
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="../images/ss-card-looping.png" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card Looping</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="https://tobiashollander.github.io/Card-Looping/" target="_blank" class="btn btn-outline-secondary">Check It Out</a>
+    <div class='col s6'>
+      <div class="card">
+        <div class="card-image">
+          <img src="../images/ss-card-looping.png">
+        </div>
+        <div class="card-content">
+          <span class="card-title">Card Looping</span>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <div class="card-action">
+          <a href="https://tobiashollander.github.io/Card-Looping/" target="_blank" class="btn btn-outline-secondary deep-orange darken-4">Check It Out</a>
         </div>
       </div>
     </div>
 
-  <div class='col-sm-6'>
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="../images/ss-jquery-badges.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">jQuery Badges Project</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="https://tobiashollander.github.io/jQueryBadgesProject/" target="_blank" class="btn btn-outline-secondary">Check It Out</a>
+    <div class='col s6'>
+      <div class="card">
+        <div class="card-image">
+          <img src="../images/ss-jquery-badges.png">
+        </div>
+        <div class="card-content">
+          <span class="card-title">jQuery Badges Project</span>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <div class="card-action">
+          <a href="https://tobiashollander.github.io/jQueryBadgesProject/" target="_blank" class="btn btn-outline-secondary deep-orange darken-4">Check It Out</a>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 <script src="../js/main.js"></script>
 </body>
 </html>
