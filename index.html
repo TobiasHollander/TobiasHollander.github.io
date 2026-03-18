@@ -7,6 +7,7 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Rampart+One&family=Rock+3D&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
       <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
       <script src="main.js" async></script>
     </head>
@@ -15,31 +16,39 @@
       <div id="logo"><h1>Tobias Hollander</h1></div>
       <nav>
         <ul>
-          <li>About Me</li>
-          <li>Projects</li>
-          <li>Skills</li>
-          <li>Contact</li>
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section id="about-me">
-        <div>
+      <section id="left-container">
+        <div id="about-me">
           <h2>About Me</h2>
           <p>Welcome to my site! It's currently under development.</p>
         </div>
+        <div id="projects">
+          <h2>Projects</h2>
+        </div>
+        <div id="skills">
+          <h2>Skills</h2>
+          <i class="devicon-html5-plain colored"></i>
+          <i class="devicon-css3-plain colored"></i>
+          <i class="devicon-javascript-plain colored"></i>
+          <i class="devicon-postgresql-plain colored"></i>
+          <i class="devicon-github-original colored"></i>
+        </div>
+      </section>
+      <section id="right-container">
         <div id="img-container">
           <img src="./resources/images/tobiash.jpg" alt="Tobias Hollander photo">
         </div>
       </section>
-      <section id="projects">
-        <h2>Projects</h2>
-      </section>
-      <section id="skills">
-        <h2>Skills</h2>
-        <p>skill icons will go here.</p>
-      </section>
     </main>
-    <footer> Created by Tobias Hollander in Tokyo, Japan</footer>
+    <footer>
+      <p>Created by Tobias Hollander in Tokyo, Japan</p>
+    </footer>
   </body>
 </html>
