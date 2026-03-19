@@ -47,12 +47,12 @@ nav ul li {
 }
 /* Hyperlink Styles */
 a:link {
-    color: black;
+    color: rgb(0,0,0);
     text-decoration: none;
 }
 
 a:visited {
-    color: black;
+    color: rgb(0,0,0);
     text-decoration: none;
 }
 
