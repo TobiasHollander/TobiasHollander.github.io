@@ -1,19 +1,44 @@
-/* CSS Variables / Custom Properties */
+/* -- CSS Variables (the heart of the toggle) -- */
 :root {
-    --light-pink: rgb(232, 190, 212);
-    --dark-pink: rgb(218, 137, 169);
-    --light-purple: rgb(203, 167, 228);
-    --med-purple: rgb(197, 149, 217);
-    --dark-purple: rgb(175, 95, 168);
     --font-size: 16px;
 }
 
-/* Reset / Base styles */
+:root[data-theme="light"] {
+    --bg: rgb(255,255,255);
+    --main-text: rgb(0,0,0);
+    --logo-text: rgb(175, 95, 168);
+    --heading-text: rgb(255,255,255);
+    --heading-bg: rgb(197,149,217);
+    --link-hover1: rgb(232, 190, 212);
+    --link-hover2: rgb(218, 137, 169);
+    --link-hover3: rgb(203, 167, 228);
+    --link-hover4: rgb(197, 149, 217);
+    --toggle-bg: rgb(197, 149, 217);
+}
+
+:root[data-theme="dark"] {
+    --bg: rgb(140,153,166);
+    --main-text: rgb(255,255,255);
+    --logo-text: rgb(255,255,255);
+    --heading-text: rgb(255,255,255);
+    --heading-bg: rgb(203, 167, 228);
+    --link-hover1: rgb(255,255,255);
+    --link-hover2: rgb(255,255,255);
+    --link-hover3: rgb(255,255,255);
+    --link-hover4: rgb(255,255,255);
+    --toggle-bg: rgb(255,255,255);
+}
+
+/* -- Reset & Base -- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 html {
     font-size: var(--font-size);
     font-family: "Noto Sans Mono", monospace;
-    margin: 0;
-    padding: 0;
 }
 
 /* Element-level styles */
@@ -23,7 +48,9 @@ body {
     flex-direction: column;
     margin: 0;
     padding: 0 0.625rem;
-    box-sizing: border-box;
+    background: var(--bg);
+    color: var(--main-text);
+    transition: background 0.4s ease, color 0.4s ease;
 }
 
 header {
@@ -31,6 +58,11 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
 }
 
 nav ul {
@@ -46,38 +78,42 @@ nav ul li {
     font-weight: 700;
 }
 /* Hyperlink Styles */
+nav li a {
+    transition: color 0.2s;
+}
+
 a:link {
-    color: rgb(0,0,0);
+    color: var(--main-text);
     text-decoration: none;
 }
 
 a:visited {
-    color: rgb(0,0,0);
+    color: var(--main-text);
     text-decoration: none;
 }
 
 nav li:nth-child(1) a:hover {
-    color: var(--light-pink);
+    color: var(--link-hover1);
     text-decoration: underline;
 }
 
 nav li:nth-child(2) a:hover {
-    color: var(--dark-pink);
+    color: var(--link-hover2);
     text-decoration: underline;
 }
 
 nav li:nth-child(3) a:hover {
-    color: var(--light-purple);
+    color: var(--link-hover3);
     text-decoration: underline;
 }
 
 nav li:nth-child(4) a:hover {
-    color: var(--med-purple);
+    color: var(--link-hover4);
     text-decoration: underline;
 }
 
 a:active {
-    color: black;
+    color: var(--main-text);
     text-decoration: none;
 }
 
@@ -85,7 +121,52 @@ a:active {
     font-family: "Rampart One", sans-serif;
     font-size: 1.5rem;
     margin: 0 0.625rem;
-    color: var(--dark-purple);
+    color: var(--logo-text);
+}
+
+/* -- The Toggle Button -- */
+.toggle-btn {
+    width: 52px;
+    height: 28px;
+    border-radius: 999px;
+    border: none;
+    background: var(--toggle-bg);
+    cursor: pointer;
+    position: relative;
+    transition: background 0.4s ease;
+    flex-shrink: 0;
+}
+
+.toggle-btn::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--bg);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.4s ease;
+}
+
+[data-theme="dark"] .toggle-btn::after {
+    transform: translateX(24px);
+}
+
+.toggle-label {
+    font-size: 0.75rem;
+    color: var(--main-text);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    user-select: none;
+    margin-right: 0.5rem;
+}
+
+.toggle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 0.625rem;
 }
 
 main {
@@ -95,12 +176,12 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin: 0.625rem 0;
+    margin: 1.25rem 0 0.625rem 0;
 }
 
 h2 {
-    background-color: var(--med-purple);
-    color: #ffffff;
+    background-color: var(--heading-bg);
+    color: var(--heading-text);
     padding: 10px;
     margin: 0 0 1rem 0;
 }
@@ -116,6 +197,10 @@ h2 {
 }
 
 #left-container div {
+    margin-bottom: 1rem;
+}
+
+#left-container div p {
     margin-bottom: 1rem;
 }
 

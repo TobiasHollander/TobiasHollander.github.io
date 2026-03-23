@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="light">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Rampart+One&family=Rock+3D&display=swap" rel="stylesheet">
         <link href="./resources/css/contact.css" type="text/css" rel="stylesheet">
         <script src="https://kit.fontawesome.com/61ba1aa0d5.js" crossorigin="anonymous" async ></script>
+        <script src="main.js" async ></script>
     </head>
     <body>
         <header>
@@ -19,6 +20,11 @@
                 <ul>
                 <li><a href="index.html">Home</a></li>
                 </ul>
+                <!-- Light & Dark Mode Toggle -->
+                <div class="toggle-wrapper">
+                    <span class="toggle-label" id="toggle-label">Light</span>
+                    <button class="toggle-btn" id="themeToggle" aria-label="Toggle dark mode"></button>
+                </div>
             </nav>
         </header>
         <main>
