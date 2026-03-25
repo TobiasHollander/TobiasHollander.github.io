@@ -7,13 +7,17 @@
     --bg: rgb(255,255,255);
     --main-text: rgb(0,0,0);
     --logo-text: rgb(175, 95, 168);
-    --heading-text: rgb(255,255,255);
-    --heading-bg: rgb(197,149,217);
+    --heading-text: rgb(197, 149, 217);
     --link-hover1: rgb(232, 190, 212);
     --link-hover2: rgb(218, 137, 169);
     --link-hover3: rgb(203, 167, 228);
     --link-hover4: rgb(197, 149, 217);
     --toggle-bg: rgb(197, 149, 217);
+    --card-bg: rgb(197, 149, 217);
+    --border: rgb(183, 124, 208);
+    --shadow: 0 4px 24px rgba(0,0,0,0.08);
+    --accent: rgb(255, 255, 153);
+    --card-p: rgb(255, 255, 204);
 }
 
 :root[data-theme="dark"] {
@@ -21,12 +25,16 @@
     --main-text: rgb(255,255,255);
     --logo-text: rgb(255,255,255);
     --heading-text: rgb(255,255,255);
-    --heading-bg: rgb(203, 167, 228);
     --link-hover1: rgb(255,255,255);
     --link-hover2: rgb(255,255,255);
     --link-hover3: rgb(255,255,255);
     --link-hover4: rgb(255,255,255);
     --toggle-bg: rgb(255,255,255);
+    --card-bg: rgb(155, 166, 176);
+    --border: rgb(198, 204, 210);
+    --shadow: 0 4px 24px rgba(0,0,0,0.4);
+     --accent: rgb(255, 255, 153);
+     --card-p: rgb(255, 255, 204);
 }
 
 /* -- Reset & Base -- */
@@ -118,9 +126,9 @@ a:active {
 }
 
 #logo {
-    font-family: "Rampart One", sans-serif;
+    font-family: "Prata", serif;
     font-size: 1.5rem;
-    margin: 0 0.625rem;
+    margin: 0.625rem;
     color: var(--logo-text);
 }
 
@@ -174,16 +182,22 @@ main {
     width: 100%;
     flex: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     margin: 1.25rem 0 0.625rem 0;
 }
 
 h2 {
-    background-color: var(--heading-bg);
+    border-bottom: medium solid var(--accent);
     color: var(--heading-text);
     padding: 10px;
-    margin: 0 0 1rem 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.fa-square-linkedin, 
+.fa-square-github,
+.fa-envelope {
+    color: var(--fa-icons);
 }
 
 footer {

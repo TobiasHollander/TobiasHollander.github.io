@@ -9,10 +9,11 @@ const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 const initial = (userHasChosen && saved) ? saved : (prefersDark ? 'dark' : 'light');
 
 // Function to switch the Light & Dark theme
-const setTheme = theme => {
+const setTheme = (theme, userChosen = false) => {
     html.setAttribute('data-theme', theme);
     label.textContent = theme === 'dark' ? 'Dark' : 'Light';
     localStorage.setItem('theme', theme);
+    if (userChosen) localStorage.setItem('userChosen', 'true');
 };
 
 // Call function to set the current theme
@@ -21,5 +22,5 @@ setTheme(initial);
 // Toggle button between Light & Dark mode
 toggle.addEventListener('click', () => {
     const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    setTheme(next);
+    setTheme(next, true);
 });
