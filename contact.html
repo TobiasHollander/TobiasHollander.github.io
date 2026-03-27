@@ -13,22 +13,27 @@
     </head>
     <body>
         <header>
-            <div id="logo">
-                <h1>Tobias Hollander</h1>
-            </div>
-            <nav>
-                <ul>
-                <li><a href="index.html">Home</a></li>
-                </ul>
-                <!-- Light & Dark Mode Toggle -->
-                <div class="toggle-wrapper">
+            <div id="logo" class="nonMobile"><h1 class="desktop">Tobias Hollander</h1><h1 class="tablet">TH</h1></div>
+                <nav>
+                    <ul class="nonMobile">
+                    <li><a href="index.html">Home</a></li>
+                    </ul>
+                    <!-- Dropdown Menu for Mobile Media Query-->
+                    <div class="mobile dropdown">
+                    <button class="dropbtn mobile">Menu</button>
+                    <div class="dropdown-content mobile">
+                    <a href="index.html">Home</a>
+                    </div>
+                </div>
+                    <!-- Light & Dark Mode Toggle -->
+                    <div class="toggle-wrapper">
                     <span class="toggle-label" id="toggle-label">Light</span>
                     <button class="toggle-btn" id="themeToggle" aria-label="Toggle dark mode"></button>
-                </div>
-            </nav>
+                    </div>
+                </nav>
         </header>
         <main>
-            <section>
+            <section id="contact">
                 <h2>Contact</h2>
                 <p>Have an interesting project? I would love to hear about it!</p>
                 <br>

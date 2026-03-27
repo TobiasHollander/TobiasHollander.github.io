@@ -13,14 +13,24 @@
     </head>
     <body>
     <header>
-      <div id="logo"><h1>Tobias Hollander</h1></div>
+      <div id="logo" class="nonMobile"><h1 class="desktop">Tobias Hollander</h1><h1 class="tablet">TH</h1></div>
       <nav>
-        <ul>
+        <ul class="nonMobile">
           <li><a href="#about-me">About Me</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <!-- Dropdown Menu for Mobile Media Query-->
+        <div class="mobile dropdown">
+        <button class="dropbtn mobile">Menu</button>
+        <div class="dropdown-content mobile">
+          <a href="#about-me">About Me</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="contact.html">Contact</a>
+        </div>
+       </div>
         <!-- Light & Dark Mode Toggle -->
         <div class="toggle-wrapper">
           <span class="toggle-label" id="toggle-label">Light</span>
